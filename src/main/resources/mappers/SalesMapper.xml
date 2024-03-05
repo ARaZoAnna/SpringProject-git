@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.repository.SalesMapper">
+    <insert id="uploadNongraSales" parameterType="java.util.List">
+
+        INSERT INTO sales (
+        ID,
+        date,
+        smallCategory,
+        channel,
+        productName,
+        payway,
+        salesCount,
+        salesAmount
+        )
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+        (
+            #{item.ID},
+            #{item.date},
+            #{item.smallCategory},
+            #{item.channel},
+            #{item.productName},
+            #{item.payway},
+            #{item.salesCount},
+            #{item.salesAmount}
+            )
+        </foreach>
+    </insert>
+
+    <insert id="uploadNongraCommission" parameterType="java.util.List">
+
+        INSERT INTO commission (
+        ID,
+        date,
+        smallCategory,
+        commissionCount,
+        commissionAmount,
+        channel
+        )
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+            #{item.ID},
+            #{item.date},
+            #{item.smallCategory},
+            #{item.commissionCount},
+            #{item.commissionAmount},
+            #{item.channel}
+            )
+        </foreach>
+    </insert>
+
+    <select id="checkUploadSales" parameterType="org.example.domain.Sales" resultType="org.example.domain.Sales">
+
+        SELECT ID, date, smallCategory, channel,
+            productName, payway, salesCount, salesAmount
+        FROM sales
+        WHERE
+            ID = #{ID} and date = #{date} and productName = #{productName}
+
+    </select>
+
+    <select id="checkUploadCommission" parameterType="org.example.domain.Commission" resultType="org.example.domain.Commission">
+
+        SELECT ID, date, smallCategory, commissionCount, commissionAmount, channel
+        FROM commission
+        WHERE ID = #{ID}
+
+    </select>
+
+</mapper>

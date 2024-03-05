@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.repository.ExpenseMapper">
+    <insert id="saveExpense" parameterType="org.example.domain.Expense">
+
+        INSERT INTO expense
+        VALUES(#{date},#{smallCategory},#{productName},#{expenseAmount}, #{expenseCount})
+
+    </insert>
+
+    <select id="selectAllExpesne" resultType="org.example.domain.Expense">
+
+        SELECT date, smallCategory, productName, expenseAmount, expenseCount
+        FROM expense
+
+    </select>
+
+    <select id="selectExpenseByDate" parameterType="java.lang.String" resultType="org.example.domain.Expense">
+
+        SELECT date, smallCategory, productName, expenseAmount, expenseCount
+        FROM expense
+        WHERE date like concat(#{inputdate},'%')
+
+    </select>
+
+    <update id="updateExpense" parameterType="org.example.domain.Expense">
+
+        UPDATE expense
+        SET expenseAmount = #{expenseAmount}, expenseCount = #{expenseCount}
+        WHERE date = #{date} and smallCategory = #{smallCategory} and productName = #{productName}
+
+
+    </update>
+
+    <select id="selectByDateAndSmallCategory" parameterType="org.example.domain.Expense" resultType="org.example.domain.Expense">
+
+        SELECT date, smallCategory, productName, expenseAmount, expenseCount
+        FROM expense
+        WHERE date = #{date} and smallCategory = #{smallCategory} and productName = #{productName}
+
+    </select>
+
+    <delete id="deleteExpense" parameterType="org.example.domain.Expense">
+
+        DELETE FROM expense
+        WHERE date = #{date} and smallCategory = #{smallCategory} and productName = #{productName}
+
+    </delete>
+
+</mapper>
