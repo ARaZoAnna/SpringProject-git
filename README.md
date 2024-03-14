@@ -78,6 +78,9 @@
 ![ERD](images/UI2.png)
 ![ERD](images/UI3.png)
 
+## 🎨 UseCase Diagram
+![ERD](images/usecase.png)
+
 ## 🎨 ERD Diagram
 ![ERD](images/ERDdiagram.png)
 
