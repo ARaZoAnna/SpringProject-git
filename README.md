@@ -31,7 +31,7 @@
 <p align="center">
 
 <img src="https://img.shields.io/badge/Java 17-008FC7?style=for-the-badge&logo=Java&logoColor=white"/>
-<img src="https://img.shields.io/badge/spring 3-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
+<img src="https://img.shields.io/badge/springboot 3-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
 <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=for-the-badge&logo=Spring Security&logoColor=white"/>
 <img src="https://img.shields.io/badge/-MyBatis-blue?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=Gradle&logoColor=white"/>
@@ -83,5 +83,17 @@
 
 ## 🎨 ERD Diagram
 ![ERD](images/ERDdiagram.png)
+
+<br>
+
+
+## 🥲 시행착오들
+[ 🐛MySQL - MySQL 프로시저 작성 및 호출하기 ](https://annacodingnote.blogspot.com/2024/03/mysql.html) <br>
+[ 🐝Docker - 도커에서 MySQL 사용하기(설치) ](https://annacodingnote.blogspot.com/2024/02/mysql.html) <br>
+[ 🪱Docker - 도커에서 MySQL 사용하기(오류) ](https://annacodingnote.blogspot.com/2024/02/springboot3-mysql.html) <br>
+[ 🫎Apache POI - POI라이브러리 사용하기 ](https://annacodingnote.blogspot.com/2024/02/3-poi.html) <br>
+[ 🦄SpringBoot3 - .yml 과 .properties 차이 ](https://annacodingnote.blogspot.com/2024/01/applicationyml-applicationproperties.html) <br>
+[ 🐴SpringBoot3 - SpringBoot2에서 SpringBoot3로 업데이트하기 ](https://annacodingnote.blogspot.com/2024/01/springboot2-springboot3.html) <br>
+
 
 <br>
