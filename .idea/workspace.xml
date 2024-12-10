@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2034646-3e82-416f-b381-971482060ad9" name="Changes" comment="feat : commit README files(add)">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/.github/issue_template.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/pull_request_template.md" afterDir="false" />
+>>>>>>> cb0f39d17bd469d356e8ecaa8ccf7a36dc0d5617
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,14 +53,17 @@
     &quot;assignee&quot;: &quot;choara5442&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/choara5442/SpringProject-git.git&quot;,
-    &quot;accountId&quot;: &quot;54d8bca8-67ad-4d69-8681-4b98860a53a3&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ARaZoAnna/SpringProject-git.git",
+    "accountId": "54d8bca8-67ad-4d69-8681-4b98860a53a3"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="없음" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -66,6 +74,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -85,6 +94,27 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feat-login",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/WebProject/gam-project-spring/gamproject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/WebProject/gam-project-spring/gamproject/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> cb0f39d17bd469d356e8ecaa8ccf7a36dc0d5617
   }
 }</component>
   <component name="RecentsManager">
@@ -235,7 +265,7 @@
       <workItem from="1731327152454" duration="642000" />
       <workItem from="1731416803458" duration="1361000" />
       <workItem from="1733456113013" duration="4187000" />
-      <workItem from="1733805567995" duration="2277000" />
+      <workItem from="1733805567995" duration="5183000" />
     </task>
     <task id="LOCAL-00001" summary="feat : second commit images files(UI)">
       <option name="closed" value="true" />
