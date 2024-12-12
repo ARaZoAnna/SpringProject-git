@@ -1,7 +1,6 @@
 package org.example.domain;
 
 
-import jakarta.persistence.Entity;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,21 +11,21 @@ import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class UserDetail implements UserDetails {
+public class User implements UserDetails {
 
     String username;
     String password;
 
     @Builder
-    public UserDetail(String username, String password, String auth){
+    public User(String username, String password, String auth){
         this.username = username;
         this.password = password;
     }
 
-    @Override // 권한 반환
+    @Override // 사용자가 가지고 있는 권한의 목록을 반환
     public Collection<? extends GrantedAuthority> getAuthorities(){
-        //return List.of(new SimpleGrantedAuthority("user"));
-        return null;
+        return List.of(new SimpleGrantedAuthority("user"));
+        //return null;
     }
 
     // 사용자의 id를 반환(고유한 값)

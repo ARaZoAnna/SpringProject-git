@@ -1,7 +1,7 @@
 package org.example.config;
 
 import lombok.RequiredArgsConstructor;
-import org.example.service.UserDetailService;
+import org.example.service.CustomUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,14 +11,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.boot.autoconfigure.security.servlet.PathRequest.toH2Console;
-
 @RequiredArgsConstructor
 @Configuration
 public class WebSecurityConfig {
     //실제 인증 처리를 하는 시큐리티 설정 파일
 
-    private final UserDetailService userService;
+    private final CustomUserDetailService userService;
 
     //스프링 시큐리티 기능 비활성화
     @Bean
@@ -50,7 +48,7 @@ public class WebSecurityConfig {
     //인증 관리자 관련 설정
     @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http, BCryptPasswordEncoder bCryptPasswordEncoder,
-                                                       UserDetailService userDetailService) throws Exception{
+                                                       CustomUserDetailService userDetailService) throws Exception{
         return http.getSharedObject(AuthenticationManagerBuilder.class)
                 .userDetailsService(userService) // 사용자 정보 서비스 설정
                 .passwordEncoder(bCryptPasswordEncoder)

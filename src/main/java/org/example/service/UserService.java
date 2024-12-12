@@ -1,7 +1,7 @@
 package org.example.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.domain.UserDetail;
+import org.example.domain.User;
 import org.example.domain.UserRequest;
 import org.example.repository.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class UserService{
 
     public Long save(UserRequest dto) {
         System.out.println(dto.toString());
-        UserDetail userDetail = UserDetail.builder()
+        User userDetail = User.builder()
                                 .username(dto.getUsername())
                                 .password(bCryptPasswordEncoder.encode(dto.getPassword())).build();
         Long result = userMapper.save(userDetail);

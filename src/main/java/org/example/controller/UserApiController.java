@@ -1,9 +1,7 @@
 package org.example.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.domain.UserDetail;
 import org.example.domain.UserRequest;
-import org.example.service.UserDetailService;
 import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
