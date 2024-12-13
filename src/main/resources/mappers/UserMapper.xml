@@ -12,4 +12,11 @@
 
     </select>
 
+    <insert id="saveUser" parameterType="org.example.domain.AddUserRequest">
+
+        INSERT INTO user (username, password)
+        VALUES(#{username}, #{password})
+
+    </insert>
+
 </mapper>

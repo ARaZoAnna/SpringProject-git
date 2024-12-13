@@ -1,6 +1,7 @@
 package org.example.service;
 
 import lombok.RequiredArgsConstructor;
+import org.example.domain.AddUserRequest;
 import org.example.domain.User;
 import org.example.domain.UserRequest;
 import org.example.repository.UserMapper;
@@ -16,14 +17,16 @@ public class UserService{
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
-    public Long save(UserRequest dto) {
+    public Long save(AddUserRequest dto) {
         System.out.println(dto.toString());
         User userDetail = User.builder()
                                 .username(dto.getUsername())
                                 .password(bCryptPasswordEncoder.encode(dto.getPassword())).build();
-        Long result = userMapper.save(userDetail);
+        Long result = userMapper.saveUser(userDetail);
         System.out.println("result ; "+result);
         return result;
 
     }
+
+
 }

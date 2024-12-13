@@ -8,5 +8,5 @@ import java.util.Optional;
 @Mapper
 public interface UserMapper {
     public User findByEmail(String username);
-    public Long save(User userDetail);
+    public Long saveUser(User userDetail);
 }
