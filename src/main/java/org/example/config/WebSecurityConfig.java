@@ -30,7 +30,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         return http
                 .authorizeRequests() //인증, 인가 설정
-                .requestMatchers("/login", "/admin/**", "/static/**", "/signup", "/user").permitAll()
+                .requestMatchers("/login","/user/login", "/admin/**", "/static/**", "/signup", "/user").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()// 폼 기반 로그인 설정

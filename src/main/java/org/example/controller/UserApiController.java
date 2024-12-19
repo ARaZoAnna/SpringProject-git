@@ -35,8 +35,8 @@ public class UserApiController {
         return "/admin/login.html"; // 정적 HTML 파일 제공
     }
 
-
-    @PostMapping("/login")
+    // 일반
+    @PostMapping("/user/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
         String username = credentials.get("username");
         String password = credentials.get("password");
@@ -56,17 +56,21 @@ public class UserApiController {
         }
     }
 
+    @GetMapping("/signup")
+    public String signupPage() {
+        return "/admin/signup.html";
+    }
 
 
 //회원가입
-    @PostMapping("/singup")
-    public String signup(@RequestBody Map m){
+    @PostMapping("/user/signup")
+    public String signup(@RequestBody Map <String,String> m){
         System.out.println(m.toString());
         AddUserRequest UserRequest = new AddUserRequest();
-        UserRequest.setUsername((String) m.get("username"));
-        UserRequest.setPassword((String) m.get("password"));
+        UserRequest.setUsername(m.get("username"));
+        UserRequest.setPassword(m.get("password"));
         userService.save(UserRequest); //회원 가입 메서드 호출
-        return "/admin/signup"; // 회원 가입이 완료된 이후에 로그인 페이지로 이동
+        return "redirect:/login"; // 회원 가입이 완료된 이후에 로그인 페이지로 이동
     }
 
 
