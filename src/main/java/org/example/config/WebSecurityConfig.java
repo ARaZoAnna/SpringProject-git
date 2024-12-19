@@ -23,14 +23,14 @@ public class WebSecurityConfig {
     public WebSecurityCustomizer configure(){
         return (web) -> web.ignoring()
                 //.requestMatchers(toH2Console())
-                .requestMatchers("/static/**");
+                .requestMatchers("/css/**", "/js/**", "/images/**");
     }
     //특정 HTTP요청에 대한 웹 기반 보안 구성
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         return http
                 .authorizeRequests() //인증, 인가 설정
-                .requestMatchers("/login", "/signup", "/user").permitAll()
+                .requestMatchers("/login", "/admin/**", "/static/**", "/signup", "/user").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()// 폼 기반 로그인 설정
